@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>delete.html</h1>
+<div class='container'>
+    <h1>delete.html</h1>
+    <h2>Add PK number to delete</h2>
+    <form action="" method='POST'>
+        {% csrf_token %}
+        <div class='form-group'>
+            <label for="pk">PK Number:</label>
+            <input class='form-control' type="text" id='pk' name='pk'>
+            <input type="submit" class='btn btn-primary'>
+        </div>
+    </form>
+</div>
 {% endblock content %}
